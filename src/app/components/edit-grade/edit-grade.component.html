@@ -1,0 +1,30 @@
+<div *ngIf="grade">
+    <h2>{{grade.cementbrand}}</h2>
+    <div>
+        CementBrand:
+        <input [(ngModel)] ="grade.cementbrand" placeholder="Cement"/>
+
+    </div>
+    <div>
+       CementGrade:
+        <input [(ngModel)] ="grade.gradeofcement" placeholder="Grade"/>
+
+    </div>
+    <div>
+        BrickType:
+        <input [(ngModel)] ="grade.bricktype" placeholder="Type"/>
+
+    </div>
+    <div>
+        AggregateGrade:
+        <input [(ngModel)] ="grade.gradeofaggregate" placeholder="Aggregate"/>
+
+    </div>
+    <button (click)="updategrade(grade)" *ngIf="grade.id">Save</button>
+    <button (click)="deletegrade(grade)" *ngIf="grade.id">Delete</button>
+    <button (click)="creategrade(grade)" *ngIf="!grade.id">Create</button>
+   
+   
+
+
+</div>
